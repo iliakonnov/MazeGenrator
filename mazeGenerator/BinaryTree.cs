@@ -19,7 +19,11 @@ namespace mazeGenerator
 			{
 				for (int y = 0; y < width; y++)
 				{
-					if (x != 0 && y != 0)
+					if (x == 0 && y == 0)
+					{
+						result[x][y] = new Direction { };
+					}
+					else if (x != 0 && y != 0)
 					{
 						result[x][y] = directions[randomer.Next(0, 2)];
 						if (result[x][y].IsUp)
