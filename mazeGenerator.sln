@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mazeGenerator", "mazeGenerator\mazeGenerator.csproj", "{4728B74B-2726-4FAF-A168-EF905BC69F3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imageGenerator", "imageGenerator\imageGenerator.csproj", "{A84C791C-5C65-4FE6-85CD-6341BCC2FF50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symbols", "Symbols\Symbols.csproj", "{96B8C519-7634-4D13-A00A-19CA9126592A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "textGenerator", "textGenerator\textGenerator.csproj", "{E5CD991D-647B-40CD-A18D-B55EF8356933}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4728B74B-2726-4FAF-A168-EF905BC69F3F}.Debug|x86.ActiveCfg = Debug|x86
+		{4728B74B-2726-4FAF-A168-EF905BC69F3F}.Debug|x86.Build.0 = Debug|x86
+		{4728B74B-2726-4FAF-A168-EF905BC69F3F}.Release|x86.ActiveCfg = Release|x86
+		{4728B74B-2726-4FAF-A168-EF905BC69F3F}.Release|x86.Build.0 = Release|x86
+		{A84C791C-5C65-4FE6-85CD-6341BCC2FF50}.Debug|x86.ActiveCfg = Debug|x86
+		{A84C791C-5C65-4FE6-85CD-6341BCC2FF50}.Debug|x86.Build.0 = Debug|x86
+		{A84C791C-5C65-4FE6-85CD-6341BCC2FF50}.Release|x86.ActiveCfg = Release|x86
+		{A84C791C-5C65-4FE6-85CD-6341BCC2FF50}.Release|x86.Build.0 = Release|x86
+		{96B8C519-7634-4D13-A00A-19CA9126592A}.Debug|x86.ActiveCfg = Debug|x86
+		{96B8C519-7634-4D13-A00A-19CA9126592A}.Debug|x86.Build.0 = Debug|x86
+		{96B8C519-7634-4D13-A00A-19CA9126592A}.Release|x86.ActiveCfg = Release|x86
+		{96B8C519-7634-4D13-A00A-19CA9126592A}.Release|x86.Build.0 = Release|x86
+		{E5CD991D-647B-40CD-A18D-B55EF8356933}.Debug|x86.ActiveCfg = Debug|x86
+		{E5CD991D-647B-40CD-A18D-B55EF8356933}.Debug|x86.Build.0 = Debug|x86
+		{E5CD991D-647B-40CD-A18D-B55EF8356933}.Release|x86.ActiveCfg = Release|x86
+		{E5CD991D-647B-40CD-A18D-B55EF8356933}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
