@@ -18,6 +18,7 @@ namespace imageGenerator
 			int doubleThird = third * 2;
 
 			// Look at positions.png
+			size--;
 			var ps = new Point[] {
 				new Point(0, 0),            // 0
 				new Point(third, 0),        // 1
@@ -40,18 +41,22 @@ namespace imageGenerator
 				new Point(size, size),         // 15
 			};
 
-			#region None
-				AddImage(
-					new Point[][] {
-					new Point[] { ps[0], ps[15] },
-					new Point[] { ps[3], ps[12] }
-					},
-					new Direction { }
-				);
+			#region 0
+			AddImage(
+				new Point[][] {
+				new Point[] { ps[0], ps[15] },
+				new Point[] { ps[3], ps[12] },
+				new Point[] { ps[0], ps[12] },
+				new Point[] { ps[0], ps[3] },
+				new Point[] { ps[3], ps[15] },
+				new Point[] { ps[12], ps[15] }
+				},
+				new Direction { }
+			);
 			#endregion
 
 			#region 1
-			// Left
+			//
 			AddImage(
 				new Point[][] {
 				new Point[] { ps[4], ps[6] },
@@ -212,6 +217,23 @@ namespace imageGenerator
 						new Direction { IsUp = true, IsDown = true, IsRight = true }
 					);
 
+			#endregion
+
+			#region 4
+			// All (4,5,1; 2,6,7; 8,9,13; 11,10,14)
+			AddImage(
+				new Point[][] {
+				new Point[] { ps[4], ps[5] },
+				new Point[] { ps[5], ps[1] },
+				new Point[] { ps[2], ps[6] },
+				new Point[] { ps[6], ps[7] },
+				new Point[] { ps[8], ps[9] },
+				new Point[] { ps[9], ps[13] },
+				new Point[] { ps[11], ps[10] },
+				new Point[] { ps[10], ps[14] },
+				},
+				new Direction { IsUp = true, IsDown = true, IsLeft = true, IsRight = true }
+			);
 			#endregion
 		}
 		void AddImage(Point[][] positions, Direction key)

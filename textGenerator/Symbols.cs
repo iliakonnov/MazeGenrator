@@ -8,7 +8,7 @@ namespace textGenerator
 	{
 		public static Dictionary<Direction, char> symbols = new Dictionary<Direction, char>
 		{
-			#region None
+			#region 0
 				{ new Direction { }, '▒'},
 			#endregion
 

@@ -30,7 +30,7 @@
     <Compile Include="BinaryTree.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Symbols\Direction.csproj">
+    <ProjectReference Include="..\Direction\Direction.csproj">
       <Project>{96B8C519-7634-4D13-A00A-19CA9126592A}</Project>
       <Name>Direction</Name>
     </ProjectReference>

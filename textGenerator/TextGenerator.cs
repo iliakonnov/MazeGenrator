@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using DirectionNs;
-using MazeGenerator;
+﻿using DirectionNs;
 
 namespace textGenerator
 {
@@ -40,17 +35,6 @@ namespace textGenerator
 				}
 			}
 			return result;
-		}
-
-		public static void Main(string[] args)
-		{
-			var maze = BinaryTree.Generate(int.Parse(args[0]), int.Parse(args[1]));
-			var text = Generate(maze);
-			foreach (var line in text)
-			{
-				Console.WriteLine(line);
-			}
-			File.WriteAllLines(args[2], text);
 		}
 	}
 }

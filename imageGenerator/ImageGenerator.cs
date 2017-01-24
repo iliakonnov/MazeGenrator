@@ -1,7 +1,5 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using DirectionNs;
-using MazeGenerator;
 
 namespace imageGenerator
 {
@@ -9,7 +7,12 @@ namespace imageGenerator
 	{
 		public static Image Generate(Direction[][] maze, int size = 16)
 		{
-			var img = new Bitmap(size*maze.Length, size*maze[0].Length);
+			int width = 0;
+			foreach (var item in maze)
+			{
+				if (item.Length > width) { width = item.Length; }
+			}
+			var img = new Bitmap(size * width, size*maze.Length);
 			Point pos;
 			var images = new Images(size, Color.Black).images;
 
@@ -18,20 +21,13 @@ namespace imageGenerator
 				for (int x = 0; x < maze.Length; x++)
 				{
 					for (int y = 0; y < maze[x].Length; y++)
-					{
-						pos = new Point(x * size, y * size);
+					{	
+						pos = new Point(y * size, x * size);
 						gfx.DrawImage(images[maze[x][y]], pos);
 					}
 				}
 			}
 			return img;
-		}
-
-		public static void Main(string[] args)
-		{
-			var maze = BinaryTree.Generate(int.Parse(args[0]), int.Parse(args[1]));
-			var img = Generate(maze);
-			img.Save(args[2]);
 		}
 	}
 }

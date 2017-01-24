@@ -5,9 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mazeGenerator", "mazeGenera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imageGenerator", "imageGenerator\imageGenerator.csproj", "{A84C791C-5C65-4FE6-85CD-6341BCC2FF50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Direction", "Symbols\Direction.csproj", "{96B8C519-7634-4D13-A00A-19CA9126592A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Direction", "Direction\Direction.csproj", "{96B8C519-7634-4D13-A00A-19CA9126592A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "textGenerator", "textGenerator\textGenerator.csproj", "{E5CD991D-647B-40CD-A18D-B55EF8356933}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{B7A03273-4809-4304-B9F6-735798AE42AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,5 +33,9 @@ Global
 		{E5CD991D-647B-40CD-A18D-B55EF8356933}.Debug|x86.Build.0 = Debug|x86
 		{E5CD991D-647B-40CD-A18D-B55EF8356933}.Release|x86.ActiveCfg = Release|x86
 		{E5CD991D-647B-40CD-A18D-B55EF8356933}.Release|x86.Build.0 = Release|x86
+		{B7A03273-4809-4304-B9F6-735798AE42AB}.Debug|x86.ActiveCfg = Debug|x86
+		{B7A03273-4809-4304-B9F6-735798AE42AB}.Debug|x86.Build.0 = Debug|x86
+		{B7A03273-4809-4304-B9F6-735798AE42AB}.Release|x86.ActiveCfg = Release|x86
+		{B7A03273-4809-4304-B9F6-735798AE42AB}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
