@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.IO;
-using Symbols;
-using mazeGenerator;
+using DirectionNs;
+using MazeGenerator;
 
 namespace textGenerator
 {
@@ -15,7 +17,7 @@ namespace textGenerator
 				data[x] = new char[maze[x].Length];
 				for (int y = 0; y < maze[x].Length; y++)
 				{
-					data[x][y] = Symbols.Symbols.symbols[maze[x][y]];
+					data[x][y] = Symbols.symbols[maze[x][y]];
 				}
 			}
 			var result = new string[maze.Length];
@@ -34,7 +36,7 @@ namespace textGenerator
 				result[x] = new Direction[data[x].Length];
 				for (int y = 0; y < data[x].Length; y++)
 				{
-					result[x][y] = Symbols.Symbols.directions[data[x][y]];
+					result[x][y] = Symbols.directions[data[x][y]];
 				}
 			}
 			return result;

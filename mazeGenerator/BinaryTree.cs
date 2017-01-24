@@ -1,7 +1,7 @@
 ﻿using System;
-using Symbols;
+using DirectionNs;
 
-namespace mazeGenerator
+namespace MazeGenerator
 {
 	public static class BinaryTree
 	{

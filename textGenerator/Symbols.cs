@@ -1,38 +1,25 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using DirectionNs;
 
-namespace Symbols
+namespace textGenerator
 {
-	public class Direction
-	{
-		public bool IsLeft { get; set; }
-		public bool IsRight { get; set; }
-		public bool IsDown { get; set; }
-		public bool IsUp { get; set; }
-		public override int GetHashCode()
-		{
-			return IsLeft.GetHashCode()*1000 + IsRight.GetHashCode()*100 + IsDown.GetHashCode()*10 + IsUp.GetHashCode();
-		}
-		public override bool Equals(object obj)
-		{
-			return GetHashCode() == obj.GetHashCode();
-		}
-	}
-
 	public static class Symbols
 	{
 		public static Dictionary<Direction, char> symbols = new Dictionary<Direction, char>
 		{
-			// None
-			{ new Direction { }, '▒'},
+			#region None
+				{ new Direction { }, '▒'},
+			#endregion
 
-			// ===1==
+			#region 1
 				{ new Direction { IsLeft = true }, '╡'},
 				{ new Direction { IsUp = true }, '╨'},
 				{ new Direction { IsDown = true }, '╥'},
 				{ new Direction { IsRight = true }, '╞'},
+			#endregion
 
-			// ===2===
+			#region 2
 				// Left
 					{ new Direction { IsLeft = true, IsUp = true }, '╝'},  // Up
 					{ new Direction { IsLeft = true, IsDown = true }, '╗'},  // Down
@@ -44,8 +31,9 @@ namespace Symbols
 
 				// Down
 					{ new Direction { IsDown = true, IsRight = true}, '╔'},  // Right
+			#endregion
 
-			// ===3===
+			#region 3
 				// Left
 					// Up
 						{ new Direction { IsLeft = true, IsUp = true, IsDown = true }, '╣'},  // Down
@@ -55,9 +43,12 @@ namespace Symbols
 				// Up
 					// Down
 						{ new Direction { IsUp = true, IsDown = true, IsRight = true }, '╠'},  // Right
+			#endregion
 
+			#region 4
 			// ===4===
 				{ new Direction { IsLeft = true, IsUp = true, IsRight = true, IsDown = true }, '╬'}  // All
+			#endregion
 		};
 
 		public static Dictionary<char, Direction> directions = symbols.ToDictionary(x => x.Value, x => x.Key);

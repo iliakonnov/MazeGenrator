@@ -1,15 +1,30 @@
 ﻿using System;
 using System.Drawing;
-using Symbols;
-using mazeGenerator;
+using DirectionNs;
+using MazeGenerator;
 
 namespace imageGenerator
 {
 	public static class ImageGenerator
 	{
-		public static Bitmap Generate(Direction[][] maze)
+		public static Image Generate(Direction[][] maze, int size = 16)
 		{
-			throw new NotImplementedException("ImageGenerator not implemented yet");
+			var img = new Bitmap(size*maze.Length, size*maze[0].Length);
+			Point pos;
+			var images = new Images(size, Color.Black).images;
+
+			using (Graphics gfx = Graphics.FromImage(img))
+			{
+				for (int x = 0; x < maze.Length; x++)
+				{
+					for (int y = 0; y < maze[x].Length; y++)
+					{
+						pos = new Point(x * size, y * size);
+						gfx.DrawImage(images[maze[x][y]], pos);
+					}
+				}
+			}
+			return img;
 		}
 
 		public static void Main(string[] args)

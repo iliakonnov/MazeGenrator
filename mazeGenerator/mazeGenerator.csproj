@@ -30,9 +30,9 @@
     <Compile Include="BinaryTree.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Symbols\Symbols.csproj">
+    <ProjectReference Include="..\Symbols\Direction.csproj">
       <Project>{96B8C519-7634-4D13-A00A-19CA9126592A}</Project>
-      <Name>Symbols</Name>
+      <Name>Direction</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

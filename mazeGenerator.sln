@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mazeGenerator", "mazeGenera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imageGenerator", "imageGenerator\imageGenerator.csproj", "{A84C791C-5C65-4FE6-85CD-6341BCC2FF50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symbols", "Symbols\Symbols.csproj", "{96B8C519-7634-4D13-A00A-19CA9126592A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Direction", "Symbols\Direction.csproj", "{96B8C519-7634-4D13-A00A-19CA9126592A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "textGenerator", "textGenerator\textGenerator.csproj", "{E5CD991D-647B-40CD-A18D-B55EF8356933}"
 EndProject
