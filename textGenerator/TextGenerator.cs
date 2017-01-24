@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Symbols;
 using mazeGenerator;
 
@@ -25,9 +26,18 @@ namespace textGenerator
 			return result;
 		}
 
-		public static void Save(string[] maze, string fName)
+		public static Direction[][] Parse(string[] data)
 		{
-			throw new NotImplementedException("Save not implemented yet");
+			var result = new Direction[data.Length][];
+			for (int x = 0; x < data.Length; x++)
+			{
+				result[x] = new Direction[data[x].Length];
+				for (int y = 0; y < data[x].Length; y++)
+				{
+					result[x][y] = Symbols.Symbols.directions[data[x][y]];
+				}
+			}
+			return result;
 		}
 
 		public static void Main(string[] args)
@@ -38,7 +48,7 @@ namespace textGenerator
 			{
 				Console.WriteLine(line);
 			}
-			Save(text, args[2]);
+			File.WriteAllLines(args[2], text);
 		}
 	}
 }

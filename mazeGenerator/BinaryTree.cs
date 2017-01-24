@@ -8,6 +8,10 @@ namespace mazeGenerator
 		public static Direction[][] Generate(int width, int height)
 		{
 			var result = new Direction[height][];
+			for (int i = 0; i < result.Length; i++)
+			{
+				result[i] = new Direction[width];
+			}
 
 			var randomer = new Random();
 			var directions = new Direction[] {

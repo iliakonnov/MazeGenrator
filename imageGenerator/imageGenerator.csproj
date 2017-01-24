@@ -34,6 +34,10 @@
       <Project>{96B8C519-7634-4D13-A00A-19CA9126592A}</Project>
       <Name>Symbols</Name>
     </ProjectReference>
+    <ProjectReference Include="..\mazeGenerator\mazeGenerator.csproj">
+      <Project>{4728B74B-2726-4FAF-A168-EF905BC69F3F}</Project>
+      <Name>mazeGenerator</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using Symbols;
+using mazeGenerator;
 
 namespace imageGenerator
 {
@@ -11,14 +12,11 @@ namespace imageGenerator
 			throw new NotImplementedException("ImageGenerator not implemented yet");
 		}
 
-		public static void Save(Bitmap img, string fName)
-		{
-			throw new NotImplementedException("ImageGenerator not implemented yet");
-		}
-
 		public static void Main(string[] args)
 		{
-			throw new NotImplementedException("ImageGenerator not implemented yet");
+			var maze = BinaryTree.Generate(int.Parse(args[0]), int.Parse(args[1]));
+			var img = Generate(maze);
+			img.Save(args[2]);
 		}
 	}
 }
